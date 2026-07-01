@@ -3,10 +3,10 @@ pipeline {
     stages {
         stage('Build & Deploy to Server') {
             steps {
-                echo '🚀 Pulling latest code and rebuilding microservices...'
+                echo '🚀 Pulling latest code from Public GitHub Repo and rebuilding microservices...'
                 sh '''
                     cd /root/marketplace-git
-                    git pull https://LazyBoyM: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@github.com/LazyBoyM/BaiTapLon.git main
+                    git pull https://github.com/LazyBoyM/BaiTapLon.git main
                     docker compose up -d --build
                 '''
             }

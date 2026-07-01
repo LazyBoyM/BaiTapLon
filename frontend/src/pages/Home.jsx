@@ -43,9 +43,9 @@ export default function Home() {
       <section className="relative pt-12 md:pt-24 pb-16">
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 border border-blue-500/20 text-blue-600 rounded-full text-xs md:text-sm font-extrabold tracking-wide uppercase shadow-sm">
-              <FiZap className="animate-bounce text-blue-500" />
-              Nền tảng mua sắm tài sản số thế hệ mới
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500/10 via-blue-500/10 to-purple-500/10 border border-emerald-500/30 text-emerald-600 rounded-full text-xs md:text-sm font-extrabold tracking-wide uppercase shadow-sm">
+              <FiZap className="animate-bounce text-emerald-500" />
+              ⚡ MarketHub v2.0 - Siêu mượt & Tự động hóa CI/CD Jenkins
             </div>
             
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight text-slate-900 leading-[1.08]">

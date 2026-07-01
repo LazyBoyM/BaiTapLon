@@ -10,7 +10,7 @@ pipeline {
                         -v /var/run/docker.sock:/var/run/docker.sock \
                         -w /app \
                         marketplace-jenkins \
-                        sh -c "git pull https://github.com/LazyBoyM/BaiTapLon.git main && docker compose up -d --build"
+                        sh -c "git config --global --add safe.directory /app && git pull https://github.com/LazyBoyM/BaiTapLon.git main && docker compose up -d --build"
                 '''
             }
         }

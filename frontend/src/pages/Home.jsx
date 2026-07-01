@@ -43,18 +43,18 @@ export default function Home() {
       <section className="relative pt-12 md:pt-24 pb-16">
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-gradient-to-r from-emerald-500/15 via-teal-500/15 to-blue-500/15 border border-emerald-500/40 text-emerald-600 rounded-full text-xs md:text-sm font-black tracking-wide uppercase shadow-lg shadow-emerald-500/10 backdrop-blur-md">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            <div className="inline-flex items-center gap-2.5 px-6 py-3 bg-gradient-to-r from-amber-500/20 via-rose-500/20 to-violet-500/20 border border-amber-500/50 text-amber-600 rounded-full text-xs md:text-sm font-black tracking-wide uppercase shadow-xl shadow-amber-500/10 backdrop-blur-md animate-pulse">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
               </span>
-              🔥 MarketHub v3.0 Ultimate - Apple Glass UI & 100% CI/CD Automated
+              🚀 MarketHub v4.0 Perfect - 100% Jenkins CI/CD Automated
             </div>
             
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight text-slate-900 leading-[1.08]">
               Khám phá tài nguyên <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600">
-                chuẩn Apple & 60 FPS v3.0
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-rose-600 to-violet-600">
+                chuẩn Apple & 60 FPS v4.0
               </span>
             </h1>
             

@@ -43,18 +43,18 @@ export default function Home() {
       <section className="relative pt-12 md:pt-24 pb-16">
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2.5 px-6 py-3 bg-gradient-to-r from-amber-500/20 via-rose-500/20 to-violet-500/20 border border-amber-500/50 text-amber-600 rounded-full text-xs md:text-sm font-black tracking-wide uppercase shadow-xl shadow-amber-500/10 backdrop-blur-md animate-pulse">
+            <div className="inline-flex items-center gap-2.5 px-6 py-3 bg-gradient-to-r from-violet-500/20 via-fuchsia-500/20 to-cyan-500/20 border border-violet-500/50 text-violet-600 rounded-full text-xs md:text-sm font-black tracking-wide uppercase shadow-xl shadow-violet-500/10 backdrop-blur-md animate-pulse">
               <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-violet-500"></span>
               </span>
-              🚀 MarketHub v4.0 Perfect - 100% Jenkins CI/CD Automated
+              👑 MarketHub v5.0 Masterpiece - 100% Jenkins CI/CD Automated
             </div>
             
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight text-slate-900 leading-[1.08]">
               Khám phá tài nguyên <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-rose-600 to-violet-600">
-                chuẩn Apple & 60 FPS v4.0
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-fuchsia-600 to-cyan-500">
+                chuẩn Apple & 60 FPS v5.0
               </span>
             </h1>
             

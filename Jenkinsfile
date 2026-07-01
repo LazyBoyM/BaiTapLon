@@ -1,18 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout from GitHub') {
+        stage('Build & Deploy to Server') {
             steps {
-                echo 'Pulling latest code from GitHub...'
-                sh 'git pull origin main'
-            }
-        }
-        stage('Build & Deploy Containers') {
-            steps {
-                echo 'Building and deploying Docker microservices...'
+                echo '🚀 Pulling latest code and rebuilding microservices...'
                 sh '''
                     cd /root/marketplace-git
-                    git pull origin main
+                    git pull https://LazyBoyM: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@github.com/LazyBoyM/BaiTapLon.git main
                     docker compose up -d --build
                 '''
             }
@@ -23,7 +17,7 @@ pipeline {
             echo '🎉 Deployment successfully finished! Website running at port 5000.'
         }
         failure {
-            echo '❌ Deployment failed. Please check container logs.'
+            echo '❌ Deployment failed. Check container logs.'
         }
     }
 }

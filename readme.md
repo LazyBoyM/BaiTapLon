@@ -1,3 +1,2 @@
-tôi là bot
-
+Tôi không phải robot
 

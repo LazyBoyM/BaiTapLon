@@ -5,6 +5,7 @@ services:
   frontend:
     build: ./frontend
     container_name: marketplace-frontend
+    restart: always
     ports:
       - "3000:80"
     networks:
@@ -14,6 +15,7 @@ services:
   nginx-gateway:
     build: ./nginx-gateway
     container_name: marketplace-gateway
+    restart: always
     ports:
       - "5000:5000"
     depends_on:

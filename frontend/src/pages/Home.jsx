@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import api from '../lib/api'
 import ProductCard from '../components/ProductCard'
-import { FiArrowRight, FiDownload, FiCheckCircle, FiShield, FiSparkles, FiTrendingUp, FiUsers, FiClock, FiStar } from 'react-icons/fi'
+import { FiArrowRight, FiDownload, FiCheckCircle, FiShield, FiTrendingUp, FiUsers, FiClock, FiStar, FiZap } from 'react-icons/fi'
 import { useAuthStore } from '../lib/store'
 
 export default function Home() {
@@ -44,7 +44,7 @@ export default function Home() {
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 border border-blue-500/20 text-blue-600 rounded-full text-xs md:text-sm font-extrabold tracking-wide uppercase shadow-sm">
-              <FiSparkles className="animate-spin text-blue-500" style={{ animationDuration: '8s' }} />
+              <FiZap className="animate-bounce text-blue-500" />
               Nền tảng mua sắm tài sản số thế hệ mới
             </div>
             

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuthStore } from '../lib/store'
 import { useState, useEffect } from 'react'
-import { FiSearch, FiUser, FiShoppingBag, FiMenu, FiLogOut, FiHeart, FiTag, FiTrendingUp, FiSparkles } from 'react-icons/fi'
+import { FiSearch, FiUser, FiShoppingBag, FiMenu, FiLogOut, FiHeart, FiTag, FiTrendingUp, FiStar } from 'react-icons/fi'
 import NotificationBell from './NotificationBell'
 
 export default function Navbar() {
@@ -36,7 +36,7 @@ export default function Navbar() {
           {/* Brand Logo */}
           <Link to="/" className="flex items-center gap-2.5 group">
             <div className="w-10 h-10 bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 rounded-xl flex items-center justify-center shadow-md shadow-blue-500/25 transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3">
-              <FiSparkles className="text-white" size={20} />
+              <FiStar className="text-white fill-white" size={20} />
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-extrabold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">

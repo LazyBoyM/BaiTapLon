@@ -1,20 +1,23 @@
 pipeline {
     agent any
     stages {
-        stage('Build & Deploy to Server') {
+        stage('Build & Deploy Microservices') {
             steps {
-                echo '🚀 Pulling latest code from Public GitHub Repo and rebuilding microservices...'
+                echo '🚀 Deploying automated update to CentOS host via Docker...'
                 sh '''
-                    cd /root/marketplace-git
-                    git pull https://github.com/LazyBoyM/BaiTapLon.git main
-                    docker compose up -d --build
+                    docker run --rm \
+                        -v /root/marketplace-git:/app \
+                        -v /var/run/docker.sock:/var/run/docker.sock \
+                        -w /app \
+                        marketplace-jenkins \
+                        sh -c "git pull https://github.com/LazyBoyM/BaiTapLon.git main && docker compose up -d --build"
                 '''
             }
         }
     }
     post {
         success {
-            echo '🎉 Deployment successfully finished! Website running at port 5000.'
+            echo '🎉 CI/CD Automated Deployment successfully finished! Website running at port 5000.'
         }
         failure {
             echo '❌ Deployment failed. Check container logs.'

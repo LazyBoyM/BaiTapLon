@@ -25,8 +25,8 @@ export default function Home() {
     fetchProducts()
   }, [])
 
-  const filteredProducts = activeTab === 'all' 
-    ? products 
+  const filteredProducts = activeTab === 'all'
+    ? products
     : products.filter(p => p.category?.toLowerCase() === activeTab)
 
   const categories = [
@@ -48,16 +48,16 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-violet-500"></span>
               </span>
-              👑 MarketHub v5.0 Masterpiece - 100% Jenkins CI/CD Automated
+              👑 MarketHub v5.0 Masterpiece - CI/CD
             </div>
-            
+
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight text-slate-900 leading-[1.08]">
               Khám phá tài nguyên <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-fuchsia-600 to-cyan-500">
-                chuẩn Apple & 60 FPS v5.0
+                ABCDEFGH
               </span>
             </h1>
-            
+
             <p className="text-lg md:text-2xl text-slate-500 leading-relaxed max-w-2xl mx-auto font-normal">
               Kho giao diện, mã nguồn, khóa học và sản phẩm số chất lượng cao được kiểm duyệt khắt khe dành cho nhà phát triển và sáng tạo.
             </p>
@@ -114,23 +114,23 @@ export default function Home() {
       <section className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { 
-              icon: <FiDownload size={26} />, 
-              title: 'Tải xuống tự động tức thì', 
+            {
+              icon: <FiDownload size={26} />,
+              title: 'Tải xuống tự động tức thì',
               desc: 'Hệ thống luân chuyển link tải an toàn với tốc độ cao ngay sau khi thanh toán Momo hoàn tất.',
               color: 'from-blue-500 to-indigo-600',
               bg: 'bg-blue-50/80 text-blue-600 border-blue-100'
             },
-            { 
-              icon: <FiCheckCircle size={26} />, 
-              title: 'Bản quyền & Chất lượng', 
+            {
+              icon: <FiCheckCircle size={26} />,
+              title: 'Bản quyền & Chất lượng',
               desc: 'Tất cả tài nguyên đều trải qua khâu kiểm tra mã độc và đảm bảo chất lượng vận hành mượt mà.',
               color: 'from-emerald-500 to-teal-600',
               bg: 'bg-emerald-50/80 text-emerald-600 border-emerald-100'
             },
-            { 
-              icon: <FiShield size={26} />, 
-              title: 'Thanh toán bảo mật tuyệt đối', 
+            {
+              icon: <FiShield size={26} />,
+              title: 'Thanh toán bảo mật tuyệt đối',
               desc: 'Kết nối chuẩn hóa mã hóa kép qua cổng thanh toán Momo và kiến trúc Microservices tách biệt.',
               color: 'from-purple-500 to-pink-600',
               bg: 'bg-purple-50/80 text-purple-600 border-purple-100'
@@ -170,11 +170,10 @@ export default function Home() {
               <button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}
-                className={`px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 ${
-                  activeTab === cat.id 
-                    ? 'bg-slate-900 text-white shadow-md scale-105' 
-                    : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200/80'
-                }`}
+                className={`px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 ${activeTab === cat.id
+                  ? 'bg-slate-900 text-white shadow-md scale-105'
+                  : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200/80'
+                  }`}
               >
                 {cat.label}
               </button>

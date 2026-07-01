@@ -53,8 +53,8 @@ export default function Home() {
             
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight text-slate-900 leading-[1.08]">
               Khám phá tài nguyên <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
-                đỉnh cao & tinh tế
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600">
+                chuẩn Apple & 60 FPS v3.0
               </span>
             </h1>
             

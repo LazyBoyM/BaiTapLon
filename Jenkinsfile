@@ -6,6 +6,7 @@ pipeline {
                 echo '🚀 Deploying automated update to CentOS host via Docker...'
                 sh '''
                     docker run --rm \
+                        -u 0:0 \
                         -v /root/marketplace-git:/app \
                         -v /var/run/docker.sock:/var/run/docker.sock \
                         -w /app \

@@ -41,7 +41,7 @@ export default function Home() {
       : products.filter((p) => p.category?.toLowerCase() === activeTab);
 
   const categories = [
-    { id: "all", label: "🔥 Tất cả sản phẩm ở đây" },
+    { id: "all", label: "🔥 Tất cả sản phẩm ở đây nè" },
     { id: "digital", label: "💻 Phần mềm & App" },
     { id: "ebook", label: "📚 Sách & Ebook" },
     { id: "course", label: "🎓 Khóa học Video dài ngắn đủ" },
@@ -217,10 +217,11 @@ export default function Home() {
               <button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}
-                className={`px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 ${activeTab === cat.id
+                className={`px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 ${
+                  activeTab === cat.id
                     ? "bg-slate-900 text-white shadow-md scale-105"
                     : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200/80"
-                  }`}
+                }`}
               >
                 {cat.label}
               </button>

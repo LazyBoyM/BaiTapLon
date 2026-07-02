@@ -63,7 +63,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tight text-slate-900 leading-[1.08]">
-              NgOb thíiiiiiiiiiiiiiii
+              GAY.HUB
             </h1>
 
             <p className="text-lg md:text-2xl text-slate-500 leading-relaxed max-w-2xl mx-auto font-normal">

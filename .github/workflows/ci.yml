@@ -29,7 +29,7 @@ jobs:
 
       - name: 🔄 Build & Deploy 18 Containers on CentOS 7
         run: |
-          echo "🔥 Building and restarting Docker containers..."
-          docker compose -p marketplace up -d --build
+          echo "🔥 Building and force recreating Docker containers..."
+          docker compose -p marketplace up -d --build --force-recreate
           docker ps
           echo "🎉 Automated deployment on CentOS 7 VM completed successfully!"

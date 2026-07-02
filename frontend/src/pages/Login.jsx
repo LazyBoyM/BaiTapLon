@@ -108,7 +108,8 @@ export default function Login() {
             type="email"
             placeholder="Email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            maxLength={15}
+            onChange={(e) => setEmail(e.target.value.slice(0, 15))}
             required
           />
           <Input

@@ -41,7 +41,7 @@ export default function Home() {
       : products.filter((p) => p.category?.toLowerCase() === activeTab);
 
   const categories = [
-    { id: "all", label: "🔥 Tất cả sản phẩm" },
+    { id: "all", label: "🔥 Tất cả sản phẩm ở đây" },
     { id: "digital", label: "💻 Phần mềm & App" },
     { id: "ebook", label: "📚 Sách & Ebook" },
     { id: "course", label: "🎓 Khóa học Video dài ngắn đủ" },

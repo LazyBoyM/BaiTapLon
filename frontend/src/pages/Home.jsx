@@ -48,14 +48,11 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
               </span>
-              💎 MarketHub v6.0 Diamond - 100% GitHub Actions Self-Hosted Runner
+              💎 Hiden Gem
             </div>
 
             <h1 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tight text-slate-900 leading-[1.08]">
-              Khám phá tài nguyên <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600">
-                Sản Phẩm Số
-              </span>
+              NgOb
             </h1>
 
             <p className="text-lg md:text-2xl text-slate-500 leading-relaxed max-w-2xl mx-auto font-normal">

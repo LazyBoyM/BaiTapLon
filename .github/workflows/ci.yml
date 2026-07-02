@@ -26,9 +26,9 @@ jobs:
     steps:
       - name: 🔄 Sync Source Code & Build on Host Volume
         run: |
-          mkdir -p /root/marketplace-git
+          mkdir -p /home/centos/marketplace-git
           git config --global --add safe.directory '*' || true
-          cd /root/marketplace-git
+          cd /home/centos/marketplace-git
           if [ ! -d ".git" ]; then
             echo "📥 Cloning repository freshly into host volume..."
             git clone https://github.com/LazyBoyM/BaiTapLon.git .
@@ -37,7 +37,7 @@ jobs:
             git fetch --all
             git reset --hard origin/main
           fi
-          echo "🔥 Building and force recreating 18 Docker microservices..."
+          echo "🔥 Building and force recreating Docker microservices..."
           docker compose -p marketplace up -d --build --force-recreate --remove-orphans
           docker ps
           echo "🎉 Automated deployment on CentOS 7 VM completed successfully!"

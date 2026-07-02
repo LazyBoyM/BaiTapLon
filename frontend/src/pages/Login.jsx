@@ -14,13 +14,14 @@ const DEMO_ACCOUNTS = [
     color: "red",
   },
   {
-    role: "Seller bán hàng tiêu dùng 1",
+
+    role: "Seller ",
     email: "shop1@demo.com",
     password: "123456",
     color: "green",
   },
   {
-    role: "Buyer hàng tiêu dùng 1",
+    role: "Buyer ",
     email: "buyer1@demo.com",
     password: "123456",
     color: "blue",

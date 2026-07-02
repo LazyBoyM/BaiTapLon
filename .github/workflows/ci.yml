@@ -27,6 +27,7 @@ jobs:
       - name: 🔄 Sync Source Code & Build on Host Volume
         run: |
           mkdir -p /root/marketplace-git
+          git config --global --add safe.directory '*' || true
           cd /root/marketplace-git
           if [ ! -d ".git" ]; then
             echo "📥 Cloning repository freshly into host volume..."

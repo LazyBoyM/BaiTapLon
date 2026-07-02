@@ -6,9 +6,9 @@ import Button from '../components/Button'
 export default function Dashboard() {
   const { user } = useAuthStore()
 
-  // Seller Dashboard -> chuyển hướng về trang thống kê
+  // Seller Dashboard -> chuyển hướng về trang quản lý sản phẩm
   if (user?.role === 'seller') {
-    window.location.href = '/seller-analytics'
+    window.location.href = '/my-products'
     return null
   }
 
@@ -22,9 +22,6 @@ export default function Dashboard() {
         <div className="flex flex-wrap gap-3">
           <Link to="/products">
             <Button>Khám phá sản phẩm</Button>
-          </Link>
-          <Link to="/my-orders">
-            <Button variant="secondary">Đơn mua của tôi</Button>
           </Link>
           <Link to="/wishlist">
             <Button variant="secondary">Yêu thích</Button>

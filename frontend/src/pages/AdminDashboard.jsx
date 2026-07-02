@@ -21,12 +21,6 @@ export default function AdminDashboard() {
       description: 'Phê duyệt hoặc từ chối sản phẩm mới',
       path: '/admin/products',
       color: 'green'
-    },
-    {
-      title: 'Mã giảm giá',
-      description: 'Quản lý mã giảm giá toàn sàn',
-      path: '/admin/coupons',
-      color: 'purple'
     }
   ]
 
@@ -72,7 +66,7 @@ export default function AdminDashboard() {
       {/* Gợi ý */}
       <Card className="mt-6 bg-gray-50">
         <p className="text-sm text-gray-600">
-          <span className="font-medium">Gợi ý:</span> Sử dụng menu trên để quản lý người dùng, duyệt sản phẩm hoặc quản lý mã giảm giá.
+          <span className="font-medium">Gợi ý:</span> Sử dụng menu trên để quản lý người dùng hoặc duyệt sản phẩm.
         </p>
       </Card>
     </div>

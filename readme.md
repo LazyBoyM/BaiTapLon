@@ -63,3 +63,4 @@ EOT
 #  Khởi động lại các container để nhận cấu hình mới
 sudo docker compose -p marketplace down
 sudo docker compose -p marketplace up -d
+ # hoàn thành

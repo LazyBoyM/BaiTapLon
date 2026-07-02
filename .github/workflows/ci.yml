@@ -24,12 +24,19 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: 📦 Checkout Latest Code on Server
-        uses: actions/checkout@v4
-
-      - name: 🔄 Build & Deploy 18 Containers on CentOS 7
+      - name: 🔄 Sync Source Code & Build on Host Volume
         run: |
-          echo "🔥 Building and force recreating Docker containers..."
-          docker compose -p marketplace up -d --build --force-recreate
+          mkdir -p /root/marketplace-git
+          cd /root/marketplace-git
+          if [ ! -d ".git" ]; then
+            echo "📥 Cloning repository freshly into host volume..."
+            git clone https://github.com/LazyBoyM/BaiTapLon.git .
+          else
+            echo "🔄 Pulling latest commit from GitHub..."
+            git fetch --all
+            git reset --hard origin/main
+          fi
+          echo "🔥 Building and force recreating 18 Docker microservices..."
+          docker compose -p marketplace up -d --build --force-recreate --remove-orphans
           docker ps
           echo "🎉 Automated deployment on CentOS 7 VM completed successfully!"

@@ -24,9 +24,12 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: 🔄 Pull & Rebuild Microservices on Server
+      - name: 📦 Checkout Latest Code on Server
+        uses: actions/checkout@v4
+
+      - name: 🔄 Build & Deploy 18 Containers on CentOS 7
         run: |
-          cd /root/marketplace-git
-          git pull origin main
+          echo "🔥 Building and restarting Docker containers..."
           docker compose -p marketplace up -d --build
+          docker ps
           echo "🎉 Automated deployment on CentOS 7 VM completed successfully!"

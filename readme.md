@@ -1,2 +1,0 @@
-Tôi không phải robot
-

@@ -44,7 +44,7 @@ export default function Home() {
     { id: "all", label: "🔥 Tất cả sản phẩm ở đây nè" },
     { id: "digital", label: "💻 Phần mềm & App" },
     { id: "ebook", label: "📚 Sách & Ebook" },
-    { id: "course", label: "🎓 Khóa học Video dài ngắn đủ" },
+    { id: "course", label: "🎓 Khóa học Video" },
     { id: "template", label: "🎨 Template & Design" },
   ];
 
@@ -58,12 +58,14 @@ export default function Home() {
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
-              </span>
-              💎 Hiden GAY
+              💎 MarketHub v6.0 - Chợ Sản Phẩm Số
             </div>
 
             <h1 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tight text-slate-900 leading-[1.08]">
-              GAY.HUB
+              Khám phá tài nguyên <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600">
+                Sản Phẩm Số
+              </span>
             </h1>
 
             <p className="text-lg md:text-2xl text-slate-500 leading-relaxed max-w-2xl mx-auto font-normal">

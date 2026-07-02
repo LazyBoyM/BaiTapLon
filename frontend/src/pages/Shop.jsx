@@ -84,17 +84,6 @@ export default function Shop() {
               </div>
             </div>
           </div>
-          
-          {user?._id !== shop._id && user?.id !== shop._id && user?.role !== 'seller' && user?.role !== 'admin' && (
-            <div className="flex-shrink-0">
-              <Button 
-                onClick={() => window.openChatWith && window.openChatWith(shop._id, shop.sellerProfile?.shopName || shop.name)}
-                className="py-4 px-8 text-lg"
-              >
-                <FiMessageCircle className="mr-2" size={20} /> Chat với Shop
-              </Button>
-            </div>
-          )}
         </div>
 
         {/* Decorative Background */}
@@ -113,7 +102,7 @@ export default function Shop() {
             <p className="text-gray-400 text-lg">Shop hiện chưa đăng sản phẩm nào</p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-10">
+          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
             {products.map(p => <ProductCard key={p._id} product={p} />)}
           </div>
         )}

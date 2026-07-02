@@ -107,7 +107,7 @@ export default function Products() {
           </button>
         </Card>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
           {filteredProducts.map(p => (
             <ProductCard key={p._id} product={p} />
           ))}

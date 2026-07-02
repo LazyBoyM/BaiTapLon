@@ -38,7 +38,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="space-y-28 pb-28 overflow-hidden">
+    <div className="space-y-12 md:space-y-24 pb-12 md:pb-24 overflow-hidden">
       {/* Hero Section with Glowing Orbs */}
       <section className="relative pt-12 md:pt-24 pb-16">
         <div className="container-custom relative z-10">
@@ -51,10 +51,10 @@ export default function Home() {
               💎 MarketHub v6.0 Diamond - 100% GitHub Actions Self-Hosted Runner
             </div>
 
-            <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight text-slate-900 leading-[1.08]">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tight text-slate-900 leading-[1.08]">
               Khám phá tài nguyên <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600">
-                AAAAAAAA
+                Sản Phẩm Số
               </span>
             </h1>
 
@@ -182,7 +182,7 @@ export default function Home() {
         </div>
 
         {loading ? (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {[1, 2, 3, 4, 5, 6, 7, 8].map(i => (
               <div key={i} className="aspect-[4/5] bg-slate-200/60 animate-pulse rounded-[var(--apple-radius)]" />
             ))}
@@ -193,7 +193,7 @@ export default function Home() {
             <button onClick={() => setActiveTab('all')} className="btn-apple-ghost">Xem tất cả sản phẩm</button>
           </div>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {filteredProducts.map(product => (
               <ProductCard key={product._id} product={product} />
             ))}

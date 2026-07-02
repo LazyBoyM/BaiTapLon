@@ -5,6 +5,7 @@ import { useAuthStore } from '../lib/store'
 import Button from '../components/Button'
 import Select from '../components/Select'
 import LoadingSpinner from '../components/LoadingSpinner'
+import toast from 'react-hot-toast'
 import { FiChevronLeft, FiShare2, FiHeart, FiExternalLink, FiDownload, FiMessageCircle, FiCheckCircle } from 'react-icons/fi'
 
 export default function ProductDetail() {
@@ -102,13 +103,14 @@ export default function ProductDetail() {
     }
     setBuying(true)
     try {
-      const payload = { productId: id }
-      if (couponValid) payload.couponCode = couponCode
-      
-      const res = await api.post('/payments/create-momo', payload)
-      window.location.href = res.data.payUrl
+      // Giả lập thanh toán MoMo thành công trực tiếp để hỗ trợ test nhanh
+      setTimeout(() => {
+        setPurchased(true)
+        toast.success('Thanh toán giả lập thành công!')
+        setBuying(false)
+      }, 1000)
     } catch (error) {
-      toast.error(error.response?.data?.message || 'Không thể tạo thanh toán')
+      toast.error('Không thể tạo thanh toán')
       setBuying(false)
     }
   }

@@ -75,7 +75,7 @@ export default function Profile() {
 
       <div className="space-y-8">
         {/* Profile Card */}
-        <div className="card-apple p-8 md:p-12 bg-white">
+        <div className="card-apple p-5 md:p-12 bg-white">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-10">
             {/* Avatar Section */}
             <div className="flex flex-col items-center gap-6 pb-10 border-b border-gray-100">

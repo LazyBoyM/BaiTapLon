@@ -57,6 +57,15 @@ export default function Navbar() {
               Khám phá sản phẩm
             </Link>
 
+            {/* Mobile Search Button (visible only on mobile) */}
+            <Link 
+              to="/products"
+              className="flex sm:hidden w-10 h-10 bg-slate-100/80 items-center justify-center text-slate-600 hover:bg-slate-200/80 rounded-xl transition-colors active:scale-95"
+              aria-label="Search products"
+            >
+              <FiSearch size={18} />
+            </Link>
+
             {isAuthenticated ? (
               <div className="flex items-center gap-3">
                 <div className="relative">
@@ -84,6 +93,10 @@ export default function Navbar() {
                       </div>
 
                       <div className="p-2 space-y-1">
+                        <Link to="/products" className="flex sm:hidden items-center gap-3 px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-xl transition-colors" onClick={() => setShowMenu(false)}>
+                          <FiSearch className="text-slate-400" /> Khám phá sản phẩm
+                        </Link>
+
                         {!isAdmin && (
                           <Link to="/profile" className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-xl transition-colors" onClick={() => setShowMenu(false)}>
                             <FiUser className="text-slate-400" /> Hồ sơ cá nhân

@@ -5,8 +5,6 @@ import { useAuthStore } from '../lib/store'
 import Button from '../components/Button'
 import Select from '../components/Select'
 import LoadingSpinner from '../components/LoadingSpinner'
-import toast from 'react-hot-toast'
-import ReviewSection from '../components/ReviewSection'
 import { FiChevronLeft, FiShare2, FiHeart, FiExternalLink, FiDownload, FiMessageCircle, FiCheckCircle } from 'react-icons/fi'
 
 export default function ProductDetail() {
@@ -316,16 +314,6 @@ export default function ProductDetail() {
                     Xem cửa hàng
                   </Link>
                 </div>
-                <button 
-                  onClick={() => {
-                    if (window.openChatWith) {
-                      window.openChatWith(sellerId, product.seller?.sellerProfile?.shopName || product.seller?.name || 'Shop');
-                    }
-                  }}
-                  className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-gray-600 hover:text-blue-600 transition-all shadow-sm border border-gray-100 active:scale-90"
-                >
-                  <FiMessageCircle size={22} />
-                </button>
               </div>
             )}
 
@@ -342,11 +330,6 @@ export default function ProductDetail() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Reviews */}
-      <div className="mt-24 pt-24 border-t border-gray-100">
-        <ReviewSection productId={id} purchased={purchased} />
       </div>
     </div>
   )

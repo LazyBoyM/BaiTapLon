@@ -2,7 +2,6 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useAuthStore } from '../lib/store'
 import { useState, useEffect } from 'react'
 import { FiSearch, FiUser, FiShoppingBag, FiMenu, FiLogOut, FiHeart, FiTag, FiTrendingUp, FiStar } from 'react-icons/fi'
-import NotificationBell from './NotificationBell'
 
 export default function Navbar() {
   const { user, isAuthenticated, logout } = useAuthStore()
@@ -60,7 +59,6 @@ export default function Navbar() {
 
             {isAuthenticated ? (
               <div className="flex items-center gap-3">
-                <NotificationBell />
                 <div className="relative">
                   <button
                     onClick={() => setShowMenu(!showMenu)}
@@ -104,20 +102,11 @@ export default function Navbar() {
                             <Link to="/my-products" className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-xl transition-colors" onClick={() => setShowMenu(false)}>
                               <FiShoppingBag className="text-slate-400" /> Quản lý sản phẩm
                             </Link>
-                            <Link to="/seller-orders" className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-xl transition-colors" onClick={() => setShowMenu(false)}>
-                              <FiShoppingBag className="text-slate-400" /> Đơn đặt hàng
-                            </Link>
-                            <Link to="/seller-coupons" className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-xl transition-colors" onClick={() => setShowMenu(false)}>
-                              <FiTag className="text-slate-400" /> Mã giảm giá
-                            </Link>
                           </>
                         ) : (
                           <>
                             <Link to="/wishlist" className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-xl transition-colors" onClick={() => setShowMenu(false)}>
                               <FiHeart className="text-slate-400" /> Yêu thích của tôi
-                            </Link>
-                            <Link to="/my-orders" className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-xl transition-colors" onClick={() => setShowMenu(false)}>
-                              <FiShoppingBag className="text-slate-400" /> Lịch sử mua hàng
                             </Link>
                           </>
                         )}
